@@ -1,0 +1,62 @@
+<!-- 
+    This is a webpage for DOM Manipulation practice.
+    It will be a units converter.
+    Compatible with mobile phones.
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" >
+        <title>Convert Units m->cm</title>
+        <meta name="viewport" content="width=device-width" >
+        <link rel="stylesheet" href="style.css" >
+        <script src="code.js" defer></script>
+    </head>
+
+    <body>
+        <h1>Unit Converter</h1>
+        <p>
+            Welcome to the only converter you need!<br>
+            In this page you can do multiple conversions.
+            It is useful for engineers, students, architects and construction workers.
+        </p>
+
+        <header></header>
+        <main>
+            <div id="container">
+
+                <div id="quantity">
+                    <label>The unit you want to convert:</label>
+                    <input type="number" >
+                </div>
+
+                <div class="measure-container">
+                    <label>FROM </label>
+                    <select>
+                        <option>Meter (m)</option>
+                        <option>Centimeter (cm)</option>
+                        <option>Kilometer (km)</option>
+                    </select>
+                </div>
+                <div class="measure-container">
+                    <label>TO </label>
+                    <select>
+                        <option>Meter (m)</option>
+                        <option>Centimeter (cm)</option>
+                        <option>Kilometer (km)</option>
+                    </select>
+                </div>
+                <div id="result">
+                    <label>Result:</label>
+                    <output id="response">5 kilometros</output>
+                    <!--Select here -->
+                </div>
+            </div>
+            
+           
+
+        </main>
+        <footer></footer>
+    </body>
+</html>
