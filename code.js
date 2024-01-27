@@ -1,6 +1,6 @@
 
 //Get element with the initial data/input.
-const unitIn = document.getElementById("quantity").children[1];
+const unitIn = document.getElementById("m-quantity");
 
 //Here I get the SELECT elements.
 const initialMeasure = document.getElementById("initial-measure");
@@ -13,9 +13,27 @@ unitIn.addEventListener('change', changeText);
 initialMeasure.addEventListener('change', changeText);
 toMeasure.addEventListener('change', changeText);
 
+
 const measures = {
-    metricSys: ["mm", "cm", "dc", "m", "dam", "hm", "km"]
+    metricSys: ["mm", "cm", "dc", "m", "dam", "hm", "km"],
     //FYI each item multiplied by 10 moves 1 position to the right.
+}
+
+const impMeasures = {
+    "in": 0.0254,
+    "ft": 0.3048,
+    "yd": 0.9144,
+    "mi": 1609.34
+}
+
+function convertToMeters(quantity, from) {
+    var value = quantity * impMeasures[from];
+    return value;
+}
+
+function metersToImp(meters, to) {
+    var value = meters / impMeasures[to];
+    return value;
 }
 
 function calculateResult(initialUnit, secondUnit) {
@@ -36,7 +54,10 @@ function calculateResult(initialUnit, secondUnit) {
         result = unitIn.value / Math.pow(10, Matf.abs(diffInTable));
     }
     */
-    return unitIn.value * Math.pow(10, diffInTable);
+    result = unitIn.value * Math.pow(10, diffInTable);
+    //After I get the exact value to avoid having the UI overflow I remove decimal places.
+    result = result.toString().length > 8 ? result.toFixed(8) : result;
+    return result;
 }
 
 function changeText() {
@@ -49,3 +70,11 @@ function changeText() {
     response.innerHTML = calculateResult(initialMeasure.value, toMeasure.value)
         + " " + toMeasure.value;
 }
+
+console.log(metersToImp(convertToMeters(5, "ft"), "in"));
+
+//This Just because I want the default values like this:
+unitIn.value = 5;
+initialMeasure.value = "m";
+toMeasure.value = "cm";
+changeText();
