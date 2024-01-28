@@ -24,14 +24,13 @@
 
         <header></header>
         <main>
-            <!--METRIC SYSTEM -->
+            <!--Lengths convertion -->
             <div class="container">
-                <h3>Lengths in Metric System</h3>
+                <h3>Convert Lengths </h3>
                 <div class="quantity">
                     <label>The unit you want to convert:</label>
                     <input id="m-quantity" type="number">
                 </div>
-
                 <div class="measure-container">
                     <label>FROM </label>
                     <select name="initial-measure" id="initial-measure">
@@ -39,6 +38,10 @@
                         <option value="cm">Centimeter (cm)</option>
                         <option value="m">Meter (m)</option>
                         <option value="km">Kilometer (km)</option>
+                        <option value="in">Inches (in)</option>
+                        <option value="ft">Feet (ft)</option>
+                        <option value="yd">Yards (yd)</option>
+                        <option value="mi">Miles (mi)</option>
                     </select>
                 </div>
                 <div class="measure-container">
@@ -48,34 +51,6 @@
                         <option value="cm">Centimeter (cm)</option>
                         <option value="m">Meter (m)</option>
                         <option value="km">Kilometer (km)</option>
-                    </select>
-                </div>
-                <div class="result">
-                    <label>Result:</label>
-                    <output id="response" class="response"></output>
-                </div>
-            </div>
-
-            <!--IMPERIAL SYSTEM -->
-            <div class="container">
-                <h3>Lengths in Imperial System</h3>
-                <div class="quantity">
-                    <label>The unit you want to convert:</label>
-                    <input id="imp-quantity" type="number">
-                </div>
-
-                <div class="measure-container">
-                    <label>FROM </label>
-                    <select name="imp-initial-measure" id="imp-initial-measure">
-                        <option value="in">Inches (in)</option>
-                        <option value="ft">Feet (ft)</option>
-                        <option value="yd">Yards (yd)</option>
-                        <option value="mi">Miles (mi)</option>
-                    </select>
-                </div>
-                <div class="measure-container">
-                    <label>TO </label>
-                    <select name="imp-to-measure" id="imp-to-measure">
                         <option value="in">Inches (in)</option>
                         <option value="ft">Feet (ft)</option>
                         <option value="yd">Yards (yd)</option>
@@ -84,10 +59,9 @@
                 </div>
                 <div class="result">
                     <label>Result:</label>
-                    <output id="imp-response" class="response">5 yards</output>
+                    <output id="response" class="response">clkj</output>
                 </div>
             </div>
-
 
         </main>
         <footer></footer>
