@@ -18,6 +18,11 @@ const measures = {
 const quantityInput = document.getElementById("m-quantity");
 const initialMeasure = document.getElementById("initial-measure");
 const toMeasure = document.getElementById("to-measure");
+//configuration elements
+const configContainer = document.getElementById("config");
+const checkInputs = configContainer.querySelectorAll(".checks");
+const initialSelectOptions = document.querySelectorAll("#initial-measure  option");
+const toSelectOptions = document.querySelectorAll("#to-measure  option");
 
 //Get the element where I will output the response.
 const response = document.getElementById("response");
@@ -27,6 +32,36 @@ const response = document.getElementById("response");
 quantityInput.addEventListener('change', function (){ convertToMeters(quantityInput.value, initialMeasure.value) });
 initialMeasure.addEventListener('change', function () { convertToMeters(quantityInput.value, initialMeasure.value) });
 toMeasure.addEventListener('change', function () { convertToMeters(quantityInput.value, initialMeasure.value) });
+//Add the event listeners when the config is changed
+checkInputs[0].addEventListener('change', function () {
+    showMesures("imperial", checkInputs[0].checked)
+});
+
+checkInputs[1].addEventListener('change', function () {
+    showMesures("uncommon", checkInputs[1].checked)
+});
+
+
+function showMesures(kind, boolean) {
+    console.log(kind + " esta seleccionado? " + boolean);
+
+    initialSelectOptions.forEach(function (item, index) {
+        console.log(item.className, index)
+        if (item.className == kind && !boolean) {
+            item.style.display = "none";//don't show the option
+        } else if (item.className == kind && boolean) {
+            item.style.display = "";//this is the default display option in css
+        }
+    });
+    //second select
+    toSelectOptions.forEach(function (item, index) {
+        if (item.className == kind && !boolean) {
+            item.style.display = "none";
+        } else if (item.className == kind && boolean) {
+            item.style.display = "";
+        }
+    });
+}
 
 function convertToMeters(quantity, from) {
     var value = quantity * measures[from];
