@@ -1,3 +1,3 @@
 DOM manipulation practice.
 This project is an online converter...
-It converts units from the imperial system to the metric sistem and also it can convert units within the same system.
+It converts units from the imperial system to the metric sistem and also it can convert units within both systems.
