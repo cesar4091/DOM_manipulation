@@ -89,3 +89,6 @@ quantityInput.value = 5;
 initialMeasure.value = "m";
 toMeasure.value = "cm";
 convertToMeters(quantityInput.value, initialMeasure.value);
+//Refresh the measures
+showMesures("uncommon", checkInputs[1].checked);
+showMesures("imperial", checkInputs[0].checked);
