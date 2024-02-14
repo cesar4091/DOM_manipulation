@@ -1,21 +1,27 @@
+:root{
+    --container-width : 500px;
+}
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #132020;
-    color: white;
-    margin: 5%;
-    border: 2px solid white;
-    border-radius:10px;
+    background-color: #f5fbff;
+}
+
+#main-box{
+    margin : 50px auto 0px auto;
+    max-width: var(--container-width);
 }
 
 h1 {
     text-align: center;
-    border: 1px solid black;
-    background-color: black;
+    border: 2px solid #ffffff;
+    background-color: #1F87E0;
     border-radius: 5px;
+    color: white;
+    margin: 0;
 }
 
  h3 {
@@ -38,17 +44,16 @@ p{
     font-size: 14px;
     width: 80%;
     max-width: 500px;
-    border: 5px solid black;
+    border-radius: 10px;
     margin: 15px auto;
-    background-color: #1d3030;
+    background-color: #f0f0f0;
+    padding: 10px;
 }
 
 .quantity {
     width: 100%;
     height: 75px;
     padding: 3px;
-    border: 1px solid black;
-    /* border: 2px dotted green;*/
 }
 
 .measure-container {
@@ -69,11 +74,13 @@ select {
 }
 
 .result {
-    background-color: cadetblue;
+    background-color: #1F87E0;
+    color: white;
     width: 100%;
     height: 100px;
     padding: 3px;
     border:1px solid black;
+    border-top: 0px;
 }
 
 .response {
