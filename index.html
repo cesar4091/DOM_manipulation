@@ -15,69 +15,69 @@
     </head>
 
     <body>
-        <h1>Unit Converter</h1>
-        <p>
-            Welcome to the only converter you need!<br>
-            In this page you can do multiple conversions.
-            It is useful for engineers, students, architects and construction workers.
-        </p>
-
         <header></header>
         <main>
-            <!--Lengths convertion -->
-            <div class="container">
-                <h3>Convert Lengths </h3>
+            <div id="main-box">
+                <h1>Units Converter</h1>
+                <p>
+                    Welcome to the only converter you need!<br>
+                    In this page you can do multiple conversions.
+                    It is useful for engineers, students, architects and construction workers.
+                </p>
+                <!--Lengths convertion -->
+                <div class="container">
+                    <h3>Convert Lengths </h3>
 
-                <div class="quantity">
-                    <label>The unit you want to convert:</label>
-                    <input id="m-quantity" type="number">
-                </div>
-                <div class="measure-container">
-                    <label>FROM </label>
-                    <select name="initial-measure" id="initial-measure">
-                        <option class="metric" value="mm">Milimeter (mm)</option>
-                        <option class="metric" value="cm">Centimeter (cm)</option>
-                        <option class="metric" value="m">Meter (m)</option>
-                        <option class="metric" value="km">Kilometer (km)</option>
-                        <option class="imperial" value="in">Inches (in)</option>
-                        <option class="imperial" value="ft">Feet (ft)</option>
-                        <option class="imperial" value="yd">Yards (yd)</option>
-                        <option class="imperial" value="mi">Miles (mi)</option>
-                        <option class="uncommon" value="dc">Decimeters (dc)</option>
-                        <option class="uncommon" value="dam">Decameter (dam)</option>
-                        <option class="uncommon" value="hm">Hectometer (hm)</option>
-                    </select>
-                </div>
-                <div class="measure-container">
-                    <label>TO </label>
-                    <select name="to-measure" id="to-measure">
-                        <option class="metric" value="mm">Milimeter (mm)</option>
-                        <option class="metric" value="cm">Centimeter (cm)</option>
-                        <option class="metric" value="m">Meter (m)</option>
-                        <option class="metric" value="km">Kilometer (km)</option>
-                        <option class="imperial" value="in">Inches (in)</option>
-                        <option class="imperial" value="ft">Feet (ft)</option>
-                        <option class="imperial" value="yd">Yards (yd)</option>
-                        <option class="imperial" value="mi">Miles (mi)</option>
-                        <option class="uncommon" value="dc">Decimeters (dc)</option>
-                        <option class="uncommon" value="dam">Decameter (dam)</option>
-                        <option class="uncommon" value="hm">Hectometer (hm)</option>
-                    </select>
-                </div>
-                <div class="result">
-                    <label>Result:</label>
-                    <output id="response" class="response">clkj</output>
-                </div>
-                <div class="config-container" id="config">
-                    <p>Configuration:</p>
-                    <label for="imperial">Show imperial system measures</label>
-                    <input class="checks" type="checkbox" id="imperial" name="Imperial" value="imperial" checked>
-                    <br>
-                    <label for="uncommon">Show uncommon measures</label>
-                    <input class="checks" type="checkbox" id="uncommon" name="Uncommon" value="uncommon">
+                    <div class="quantity">
+                        <label>The unit you want to convert:</label>
+                        <input id="m-quantity" type="number">
+                    </div>
+                    <div class="measure-container">
+                        <label>FROM </label>
+                        <select name="initial-measure" id="initial-measure">
+                            <option class="metric" value="mm">Milimeter (mm)</option>
+                            <option class="metric" value="cm">Centimeter (cm)</option>
+                            <option class="metric" value="m">Meter (m)</option>
+                            <option class="metric" value="km">Kilometer (km)</option>
+                            <option class="imperial" value="in">Inches (in)</option>
+                            <option class="imperial" value="ft">Feet (ft)</option>
+                            <option class="imperial" value="yd">Yards (yd)</option>
+                            <option class="imperial" value="mi">Miles (mi)</option>
+                            <option class="uncommon" value="dc">Decimeters (dc)</option>
+                            <option class="uncommon" value="dam">Decameter (dam)</option>
+                            <option class="uncommon" value="hm">Hectometer (hm)</option>
+                        </select>
+                    </div>
+                    <div class="measure-container">
+                        <label>TO </label>
+                        <select name="to-measure" id="to-measure">
+                            <option class="metric" value="mm">Milimeter (mm)</option>
+                            <option class="metric" value="cm">Centimeter (cm)</option>
+                            <option class="metric" value="m">Meter (m)</option>
+                            <option class="metric" value="km">Kilometer (km)</option>
+                            <option class="imperial" value="in">Inches (in)</option>
+                            <option class="imperial" value="ft">Feet (ft)</option>
+                            <option class="imperial" value="yd">Yards (yd)</option>
+                            <option class="imperial" value="mi">Miles (mi)</option>
+                            <option class="uncommon" value="dc">Decimeters (dc)</option>
+                            <option class="uncommon" value="dam">Decameter (dam)</option>
+                            <option class="uncommon" value="hm">Hectometer (hm)</option>
+                        </select>
+                    </div>
+                    <div class="result">
+                        <label>Result:</label>
+                        <output id="response" class="response">clkj</output>
+                    </div>
+                    <div class="config-container" id="config">
+                        <p>Configuration:</p>
+                        <label for="imperial">Show imperial system measures</label>
+                        <input class="checks" type="checkbox" id="imperial" name="Imperial" value="imperial" checked>
+                        <br>
+                        <label for="uncommon">Show uncommon measures</label>
+                        <input class="checks" type="checkbox" id="uncommon" name="Uncommon" value="uncommon" >
+                    </div>
                 </div>
             </div>
-
         </main>
         <footer></footer>
     </body>
